@@ -1,10 +1,15 @@
+@MYBOOKING
 Feature: mybookings
-  Given I have login as 雪菲
-  Scenario: mybooking list
+
+  Background:
+    * login in
+    * I mouse over username
+
+  Scenario: check mybooking list 
     When I click My Bookings
     Then shows the list of my bookings
 
 
-  Scenario: detail of booking
-    When I click one item of bookings
+    #Scueario: detail of booking
+    When I click first item of bookings
     Then show the detail page

@@ -1,23 +1,27 @@
+@TRIPLIST
 Feature:trip list
-  Given I have login as 雪菲
-  Scenario: show all trips
-    When I click Trip Designer
-    And  I click All Trips
-    Then show all the trps
+  Background:
+    * login in
+    * I mouse over username
 
-   Scenario: show listed
+  Scenario: show all trip lists
+
+    When I click Trip Designer
+    Then show all the trips
+
+    #Scenario: show listed
     When I click listed
     Then show all the listed trips
 
-   Scenario: show pending
+    #Scenario: show pending
     When I click pending
     Then show all the pending trips
 
-   Scenario: show rejected
+    #Scenario: show rejected
     When I click rejected
     Then show all the rejected trips
 
-   Scenario: show draft
-    When I cilck draft
+    #Scenario: show draft
+    When I click draft
     Then show all the draft trips
 

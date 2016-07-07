@@ -1,12 +1,15 @@
-When /I login with email/ do
+When /I input phone number/ do
   visit ('/user/login')
     fill_in 'login-account', :with =>'18668131302'
     fill_in 'login-password', :with =>'Hi123456'
-    sleep(2)
-    click_button 'Log In'  
-  
+    sleep(1)
 end
-Then /the username changes to 雪菲/ do
+
+When /I click login button/ do
+    click_button 'Log In' 
+end
+
+Then /I am login/ do
   sleep(2)
   expect(find('#login-user-name').text).to eq('雪菲')
 end
